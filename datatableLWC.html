@@ -1,0 +1,21 @@
+<template>
+    <template if:true={data}>
+        <div>
+            <lightning-datatable data={data}
+                columns={columns}
+                                     key-field="Id"
+                                     sorted-by={sortBy}
+                                     sorted-direction={sortDirection}
+                                     onsort={doSorting}
+                                     onsave={handleSave}
+                                     draft-values={draftValues}
+                                     hide-checkbox-column="true">
+            >
+
+            </lightning-datatable>
+        </div>
+    </template>
+    <template if:true={error}>
+    <p>{error}</p>
+    </template>
+</template>
